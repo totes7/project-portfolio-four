@@ -1,0 +1,178 @@
+/* General */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.row {
+    margin-bottom: 0;
+}
+
+
+/* Text */
+
+.nunito {
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+}
+
+.txt-header {
+    text-align: center;
+    padding-top: 3%;
+}
+
+.txt-white {
+    color: white;
+}
+
+.cover-text {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    background-color: rgba(4, 54, 32, 0.8);
+}
+
+hr {
+    border-top: 1px solid white;
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+}
+
+
+/* Background colors */
+
+.bg-color-main {
+    background-color: #11e084;
+}
+
+.bg-color-sec {
+    background-color: #043620;
+}
+
+.bg-color-three {
+    background-color: #0b8b52;
+}
+
+
+/* Navbar and Logo */
+
+nav .brand-logo {
+    font-weight: bold;
+    padding: 0 0 0 2%;
+}
+
+#logo-half {
+    color: #043620;
+}
+
+nav li:hover {
+    background-color: #0b8b52;
+}
+
+
+/* Sign Up page */
+
+.signup-wrapper {
+    background-image: url("https://res.cloudinary.com/dbyx9r5rz/image/upload/v1678966578/signup-image_lzwwvt.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 650px;
+}
+
+.signup {
+    margin-bottom: 2%;
+}
+
+
+/* Log In page */
+
+.login-wrapper {
+    background-image: url("https://res.cloudinary.com/dbyx9r5rz/image/upload/v1678967404/login-image_lz391p.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+}
+
+.login {
+    margin-bottom: 2%;
+}
+
+
+/* Log Out page */
+
+.logout-wrapper {
+    background-image: url("https://res.cloudinary.com/dbyx9r5rz/image/upload/v1678967623/logout-image_l66udm.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+}
+
+.logout {
+    margin-bottom: 2%;
+}
+
+/* Homepage */
+
+#welcome {
+    background-image: url("https://res.cloudinary.com/dbyx9r5rz/image/upload/v1678893525/homepage-image_uhfsc3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 450px;
+}
+
+.btn-large:hover {
+    background-color: #11e084;
+}
+
+
+/* Menu page */
+
+.menu-wrapper {
+    background-image: url("https://res.cloudinary.com/dbyx9r5rz/image/upload/v1679489679/menu-image_iyxmbf.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 750px;
+}
+
+
+/* Footer */
+
+
+.page-footer {
+    padding-bottom: 1%;
+}
+
+footer a {
+    color: white;
+}
+
+.social i {
+    font-size: 200%;
+    padding-left: 3%;
+}
+
+.contact i {
+    font-size: 200%;
+    padding-right: 3%;
+}
+
+

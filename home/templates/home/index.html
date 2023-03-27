@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div id="welcome" class="txt-header txt-white">
+        <div class="cover-text">
+            <h1>Welcome to DineMate!</h1>
+        </div>
+        {% if user.is_authenticated %}
+            <a href="#" class="waves-effect waves-light btn-large bg-color-three">Make a Reservation</a>
+            <p>or</p>
+            <a href="{% url 'menu' %}" class="waves-effect waves-light btn-large bg-color-three">Check out the Menu</a>
+        {% else %}
+            <a href="{% url 'account_login' %}" class="waves-effect waves-light btn-large bg-color-three">Log In</a>
+            <p>or</p>
+            <a href="{% url 'account_signup' %}" class="waves-effect waves-light btn-large bg-color-three">Sign Up</a>
+        {% endif %}
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col l8 offset-l2 s10 offset-s1 txt-header">
+                <h2>About Us</h2>
+                <p>Welcome to DineMate our high-end restaurant chain, with locations in Miami, Paris, and Tokyo. Our
+                    restaurants offer a unique dining experience that combines exceptional cuisine, impeccable service, and
+                    a luxurious atmosphere.</p>
+                <p>We are dedicated to providing an unforgettable dining experience for our guests, from the moment they
+                    step through our doors to the last bite of dessert. Our staff is knowledgeable, attentive, and
+                    passionate about ensuring that every detail is perfect, from the food and wine to the ambiance and
+                    decor.</p>
+                <p>Whether you're celebrating a special occasion, enjoying a romantic dinner, or just indulging in a night
+                    out with friends, we invite you to join us at one of our locations and experience the best of high-end
+                    dining.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row txt-header bg-color-three">
+        <h2>Location</h2>
+    </div>
+
+{%endblock%}

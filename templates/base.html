@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website and booking system for DineMate, a chain of high end restaurants with three locations around the globe">
+    <meta name="keywords" content="restaurant, booking, high end, paris, miami, tokyo">
+
+    <!-- Favicon imports -->
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dbyx9r5rz/image/upload/v1679511288/apple-touch-icon_pcu4ni.png">
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dbyx9r5rz/image/upload/v1679511297/favicon-16x16_doduji.png">
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dbyx9r5rz/image/upload/v1679511304/favicon-32x32_mdqwpg.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>DineMate</title>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper bg-color-main">
+                <a href="{% url 'homepage' %}" class="brand-logo nunito">Dine<span id="logo-half">Mate</span></a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="{% url 'homepage' %}">Home</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'makebooking' %}">Bookings</a></li>
+                        <li><a href="{% url 'menu' %}">Menu</a></li>
+                        <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+                    {% else %}
+                        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+                        <li><a href="{% url 'account_login' %}">Log In</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+    <!-- Mobile sidenav -->
+    <ul class="sidenav bg-color-three" id="slide-out">
+        <li><a href="{% url 'homepage' %}">Home</a></li>
+        {% if user.is_authenticated %}
+            <li><a href="{% url 'makebooking' %}">Bookings</a></li>
+            <li><a href="{% url 'menu' %}">Menu</a></li>
+            <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+        {% else %}
+            <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+            <li><a href="{% url 'account_login' %}">Log In</a></li>
+        {% endif %}
+    </ul>
+
+    
+    <!-- Main block content -->
+    <main>
+        {% block content %}
+        
+        {% endblock content %}
+    </main> 
+
+    <!-- Footer -->
+    <footer class="page-footer bg-color-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s6 social">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="col l4 offset-l2 s6 contact">
+                    <a href="#"><i class="fa-solid fa-envelope"></i>Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+     
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
