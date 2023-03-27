@@ -31,13 +31,23 @@ main {
     color: white;
 }
 
+
 .cover-text {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3%;
     margin-bottom: 2%;
-    background-color: rgba(4, 54, 32, 0.8);
+    background-color: rgba(17, 224, 132, 0.8);
+}
+
+.cover-text-booking {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 hr {
@@ -142,6 +152,22 @@ nav li:hover {
 }
 
 
+/* Booking page */
+
+.booking-wrapper {
+    background-image: url("https://res.cloudinary.com/dbyx9r5rz/image/upload/v1679942082/booking-image_sxoiye.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 1000px;
+}
+
+.booking {
+    margin-bottom: 2%;
+}
+
+
 /* Menu page */
 
 .menu-wrapper {
@@ -155,7 +181,6 @@ nav li:hover {
 
 
 /* Footer */
-
 
 .page-footer {
     padding-bottom: 1%;

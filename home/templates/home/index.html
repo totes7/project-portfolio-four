@@ -7,7 +7,7 @@
             <h1>Welcome to DineMate!</h1>
         </div>
         {% if user.is_authenticated %}
-            <a href="#" class="waves-effect waves-light btn-large bg-color-three">Make a Reservation</a>
+            <a href="{% url 'makebooking' %}" class="waves-effect waves-light btn-large bg-color-three">Make a Reservation</a>
             <p>or</p>
             <a href="{% url 'menu' %}" class="waves-effect waves-light btn-large bg-color-three">Check out the Menu</a>
         {% else %}

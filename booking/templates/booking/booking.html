@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="booking-wrapper">
+    <div class="container">
+        <div class="row txt-header">
+            <div class="col l8 offset-l2 s10 offset-s1 cover-text-booking">
+                <h3>Book a Table</h3>
+                <form class="booking" action="{% url 'makebooking' %}" method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="waves-effect waves-light btn-small bg-color-sec" type="submit">Book</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
