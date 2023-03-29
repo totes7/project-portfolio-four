@@ -43,7 +43,7 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{% url 'homepage' %}">Home</a></li>
                     {% if user.is_authenticated %}
-                        <li><a href="{% url 'mybookings' %}">Bookings</a></li>
+                        <li><a class="dropdown-trigger" href="{% url 'mybookings' %}" data-target="dropdown">Bookings <i class="fa-sharp fa-solid fa-caret-down fa-xs"></i></a></li>
                         <li><a href="{% url 'menu' %}">Menu</a></li>
                         <li><a href="{% url 'account_logout' %}">Log Out</a></li>
                     {% else %}
@@ -55,6 +55,11 @@
         </nav>
     </div>
 
+    <!-- Dropdown Structure -->
+    <ul id="dropdown" class="dropdown-content bg-color-three">
+        <li><a href="{% url 'makebooking' %}">Make Booking</a></li>
+        <li><a href="{% url 'mybookings' %}">My Bookings</a></li>
+    </ul>
 
     <!-- Mobile sidenav -->
     <ul class="sidenav bg-color-three" id="slide-out">

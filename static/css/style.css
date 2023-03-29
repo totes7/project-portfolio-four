@@ -90,6 +90,10 @@ nav li:hover {
     background-color: #0b8b52;
 }
 
+.dropdown-content li>a {
+    color: white;
+}
+
 
 /* Sign Up page */
 
