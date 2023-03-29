@@ -15,7 +15,7 @@ class Table(models.Model):
         ordering = ['number']
 
     def __str__(self):
-        return f"Table number {self.number}"
+        return f"{self.number}"
 
 
 class Booking(models.Model):

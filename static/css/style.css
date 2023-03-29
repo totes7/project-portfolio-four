@@ -170,6 +170,18 @@ nav li:hover {
 }
 
 
+/* My Bookings page */
+
+.my-bookings-wrapper {
+    background-image: url("https://res.cloudinary.com/dbyx9r5rz/image/upload/v1680093078/mybookings-image_wbs1cf.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 1000px;
+}
+
+
 /* Menu page */
 
 .menu-wrapper {

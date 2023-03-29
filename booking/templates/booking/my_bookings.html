@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="my-bookings-wrapper">
+    <div class="container">
+        <div class="row txt-header">
+            <h3 class="txt-white">Bookings List</h3>
+            <div class="col l10 offset-l1">
+                {% for booking in bookings %}
+                <div class="card bg-color-three">
+                    <div class="card-content">
+                        <p><span class="txt-bold">Date:</span> {{ booking.date }} | <span class="txt-bold">Time:</span>
+                            {{ booking.time }} | <span class="txt-bold">Number of Guests:</span> {{ booking.guests }} |
+                            <span class="txt-bold">Table Number:</span> {{ booking.table_number }}</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="waves-effect waves-light btn-large bg-color-sec">Edit</a>
+                        <a href="#" class="waves-effect waves-light btn-large bg-color-sec">Delete</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
