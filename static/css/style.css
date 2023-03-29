@@ -153,6 +153,11 @@ nav li:hover {
     background-color: #11e084;
 }
 
+.map {
+    width: 100%;
+    height: 350px;
+}
+
 
 /* Booking page */
 
