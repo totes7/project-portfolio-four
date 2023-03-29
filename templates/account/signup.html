@@ -6,24 +6,23 @@
 
 {% block content %}
 
-<div class="signup-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="col l8 offset-l2 s10 offset-s1 cover-text-light">
-        <h1>{% trans "Sign Up" %}</h1>
 
-        <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">log in</a>.{% endblocktrans %}</p>
+<div class="container">
+  <div class="row">
+    <div class="col l8 offset-l2 s10 offset-s1 cover-text">
+      <h1>{% trans "Sign Up" %}</h1>
 
-        <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-          {% csrf_token %}
-          {{ form.as_p }}
-          {% if redirect_field_value %}
-          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-          {% endif %}
-          <button class="waves-effect waves-light btn-small bg-color-sec" type="submit">{% trans "Sign Up" %} &raquo;</button>
-        </form>
+      <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">log in</a>.{% endblocktrans %}</p>
 
-      </div>
+      <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button class="waves-effect waves-light btn-small bg-color-sec" type="submit">{% trans "Sign Up" %} &raquo;</button>
+      </form>
+
     </div>
   </div>
 </div>

@@ -35,22 +35,13 @@ main {
     font-weight: bold;
 }
 
-.cover-text-dark {
+.cover-text {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3%;
     margin-bottom: 2%;
-    background-color: rgba(4, 54, 32, 0.8);
-}
-
-.cover-text-light {
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3%;
-    margin-bottom: 2%;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 hr {
@@ -75,6 +66,10 @@ hr {
     background-color: #0b8b52;
 }
 
+.bg-color-light {
+    background-color: whitesmoke;
+}
+
 
 /* Navbar and Logo */
 
@@ -97,15 +92,6 @@ nav li:hover {
 
 /* Sign Up page */
 
-.signup-wrapper {
-    background-image: url("https://res.cloudinary.com/dbyx9r5rz/image/upload/v1678966578/signup-image_lzwwvt.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 650px;
-}
-
 .signup {
     margin-bottom: 2%;
 }
@@ -113,30 +99,12 @@ nav li:hover {
 
 /* Log In page */
 
-.login-wrapper {
-    background-image: url("https://res.cloudinary.com/dbyx9r5rz/image/upload/v1678967404/login-image_lz391p.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 500px;
-}
-
 .login {
     margin-bottom: 2%;
 }
 
 
 /* Log Out page */
-
-.logout-wrapper {
-    background-image: url("https://res.cloudinary.com/dbyx9r5rz/image/upload/v1678967623/logout-image_l66udm.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 500px;
-}
 
 .logout {
     margin-bottom: 2%;
@@ -150,7 +118,17 @@ nav li:hover {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 450px;
+    height: 100vh;
+    flex: 1;
+}
+
+.cover-text-welcome {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    background-color: rgba(4, 54, 32, 0.8);
 }
 
 .btn-large:hover {
@@ -165,15 +143,6 @@ nav li:hover {
 
 /* Booking page */
 
-.booking-wrapper {
-    background-image: url("https://res.cloudinary.com/dbyx9r5rz/image/upload/v1679942082/booking-image_sxoiye.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 1000px;
-}
-
 .booking {
     margin-bottom: 2%;
 }
@@ -187,7 +156,8 @@ nav li:hover {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 1000px;
+    height: 100vh;
+    flex: 1;
 }
 
 
@@ -199,7 +169,8 @@ nav li:hover {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 1750px;
+    height: 100%;
+    flex: 1;
 }
 
 .img-circle {
