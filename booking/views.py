@@ -21,6 +21,6 @@ class MakeBookingView(LoginRequiredMixin, CreateView):
         form = self.form_class(request.POST)
         if form.is_valid():
             new_form = form.save(commit=False)
-            new_form.user = request.user
+            new_form.customer = request.user
             new_form.save()
         return render(request, self.template_name, {'form': form})

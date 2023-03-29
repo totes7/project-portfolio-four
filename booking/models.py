@@ -36,7 +36,8 @@ class Booking(models.Model):
     time = models.IntegerField(choices=BOOKING_TIME, default=1)
     guests = models.IntegerField(default=1)
     special_request = models.TextField(max_length=200, blank=True)
-    table_number = models.ManyToManyField(Table, related_name='booked_table')
+    table_number = models.ForeignKey(Table, on_delete=models.CASCADE,
+                                     related_name='booked_table', default=1)
     updated = models.BooleanField(default=True)
 
     class Meta:

@@ -8,7 +8,7 @@ class BookingAdmin(admin.ModelAdmin):
     fields = ('date', 'time', 'guests', 'table_number',
               'customer', 'name', 'email',
               'special_request', 'updated')
-    list_display = ('name', 'email', 'date', 'time', 'guests')
+    list_display = ('name', 'email', 'date', 'time', 'guests', 'table_number')
     readonly_fields = ('date', 'time', 'guests', 'table_number')
     search_fields = ['name']
     list_filter = ('date', 'guests', 'updated')
