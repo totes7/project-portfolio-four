@@ -8,7 +8,10 @@ body {
 
 main {
     flex: 1 0 auto;
-}
+    background-color: #ffffff;
+    background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 17.5px 17.5px, linear-gradient(#11e084 1.4000000000000001px, transparent 1.4000000000000001px) 0 -0.7000000000000001px, linear-gradient(90deg, #11e084 1.4000000000000001px, #ffffff 1.4000000000000001px) -0.7000000000000001px 0;
+    background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
+    }
 
 .row {
     margin-bottom: 0;
@@ -41,7 +44,8 @@ main {
     margin-right: auto;
     margin-top: 3%;
     margin-bottom: 2%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #0b8b52;
 }
 
 hr {

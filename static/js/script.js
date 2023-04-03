@@ -12,8 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
     M.FormSelect.init(selector);
 
     // messages timeout
-    setTimeout(function() {
-        let messages = document.getElementById('msg');
-        messages.style.display = "none"
-    }, 3000);
+    let messages = document.getElementById('msg');
+    if(messages){
+        setTimeout(function() {
+            messages.style.display = "none";
+        }, 3000);
+    }
 });
