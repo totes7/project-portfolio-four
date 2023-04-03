@@ -65,7 +65,7 @@
     <ul class="sidenav bg-color-three" id="slide-out">
         <li><a href="{% url 'homepage' %}">Home</a></li>
         {% if user.is_authenticated %}
-            <li><a class="dropdown-trigger" href="#" data-target="dropdown">Bookings <i class="fa-sharp fa-solid fa-caret-down fa-xs"></i></a></li>
+            <li><a class="dropdown-trigger" href="#" data-target="dropdown"><i class="fa-sharp fa-solid fa-caret-down fa-xs"></i> Bookings</a></li>
             <li><a href="{% url 'menu' %}">Menu</a></li>
             <li><a href="{% url 'account_logout' %}">Log Out</a></li>
         {% else %}

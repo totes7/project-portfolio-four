@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row txt-header">
+        <h3 class="txt-white">Delete Booking</h3>
+        <p>Are you sure you want to delete this booking?</p>
+    </div>
+    <div class="card bg-color-main">
+            <div class="card-content">
+                <p><span class="txt-bold">Date:</span> {{ booking.date }} | <span class="txt-bold">Time:</span>
+                    {{ booking.get_time_display }} | <span class="txt-bold">Number of Guests:</span> {{ booking.guests }} |
+                    <span class="txt-bold">Table Number:</span> {{ booking.table_number }}</p>
+            </div>
+    </div>
+    <div class="row txt-header">
+        <form method="POST">
+            {% csrf_token %}
+            <button class="waves-effect waves-light btn-small bg-color-sec" type="submit">Delete</button>
+        </form>
+        <p class="text-center">
+            <a href="{% url 'mybookings' %}" class="waves-effect waves-light btn-small bg-color-sec">Back</a>
+        </p>
+    </div>
+</div>
+
+{% endblock %}

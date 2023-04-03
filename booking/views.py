@@ -3,6 +3,7 @@ from django.views.generic import (CreateView, UpdateView, DeleteView, FormView,
                                   TemplateView, ListView)
 from .models import Booking, Table
 from .forms import BookingForm
+from django.urls import reverse_lazy
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -53,3 +54,21 @@ class MyBookingsView(LoginRequiredMixin, ListView):
             return render(request, 'booking/my_bookings.html', context)
         else:
             return render(request, 'account/login.html')
+
+
+class DeleteBookingView(LoginRequiredMixin, DeleteView):
+    """
+    View to display delete booking page.
+    """
+    model = Booking
+    template_name = 'booking/delete_booking.html'
+    success_url = reverse_lazy('mybookings')
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request,
+                         'Your booking was deleted successfully.')
+        return super(DeleteBookingView, self).delete(request, *args, **kwargs)
+
+    def get_object(self, queryset=None):
+        return get_object_or_404(Booking, pk=self.kwargs.get("pk"),
+                                 customer=self.request.user)

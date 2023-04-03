@@ -15,7 +15,7 @@
                 </div>
                 <div class="card-action">
                     <a href="#" class="waves-effect waves-light btn-small bg-color-sec">Edit</a>
-                    <a href="#" class="waves-effect waves-light btn-small bg-color-sec">Delete</a>
+                    <a href="{% url 'delete_booking' booking.pk %}" class="waves-effect waves-light btn-small bg-color-sec">Delete</a>
                 </div>
             </div>
             {% endfor %}
