@@ -51,7 +51,7 @@ class MyBookingsView(LoginRequiredMixin, ListView):
         customer = request.user
         if request.user.is_authenticated:
             bookings = (Booking.objects.filter(customer=self.request.user).
-                        order_by('-date'))
+                        order_by('date'))
             context = {
                     'customer': customer,
                     'bookings': bookings,
@@ -59,6 +59,30 @@ class MyBookingsView(LoginRequiredMixin, ListView):
             return render(request, 'booking/my_bookings.html', context)
         else:
             return render(request, 'account/login.html')
+
+
+class EditBookingView(LoginRequiredMixin, UpdateView):
+    """
+    View to display edit booking page.
+    """
+    model = Booking
+    form_class = BookingForm
+    template_name = 'booking/edit_booking.html'
+    success_url = reverse_lazy('mybookings')
+
+    def update(self, request, *args, **kwargs):
+        form = self.form_class(request.POST, instance=self.get_object())
+        if form.is_valid():
+            booking = form.save()
+            booking.updated = True
+            booking.save()
+            messages.add_message(request, messages.SUCCESS,
+                                 'Your booking was updated successfully.')
+        return super(EditBookingView, self).update(request, *args, **kwargs)
+
+    def get_object(self, queryset=None):
+        return get_object_or_404(Booking, pk=self.kwargs.get("pk"),
+                                 customer=self.request.user)
 
 
 class DeleteBookingView(LoginRequiredMixin, DeleteView):
