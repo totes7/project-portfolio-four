@@ -10,4 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // selector initialization
     let selector = document.querySelectorAll('select');
     M.FormSelect.init(selector);
+
+    // messages timeout
+    setTimeout(function() {
+        let messages = document.getElementById('msg');
+        messages.style.display = "none"
+    }, 3000);
 });

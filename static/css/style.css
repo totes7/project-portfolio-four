@@ -71,6 +71,42 @@ hr {
 }
 
 
+/* Messages */
+
+.alert{
+    position: fixed;
+    left: 25%;
+    top: 12%;
+    width: 50%;
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.alert-info{
+    background-color: #039be5;
+    color: #fff;
+}
+
+.alert-success{
+    background-color: #43a047;
+    color: #fff;
+}
+
+.alert-danger{
+    background-color: #c62828;
+    color: #fff;
+}
+
+.alert-warning{
+    background-color: #fbc02d;
+    color: #fff;
+}
+
+
 /* Navbar and Logo */
 
 nav .brand-logo {

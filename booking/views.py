@@ -32,10 +32,15 @@ class MakeBookingView(LoginRequiredMixin, CreateView):
                 booking.table_number = available_tables[0]
                 booking.customer = request.user
                 booking.save()
+                messages.add_message(request, messages.SUCCESS,
+                                     'Your booking was placed successfully.')
                 return redirect('mybookings')
             else:
                 form.add_error(None,
-                               'No tables available for the selected date')
+                               f'No tables available for this amount'
+                               f' of guests at the selected date and time.')
+                messages.add_message(request, messages.ERROR,
+                                     'Your booking was not successfull.')
         return render(request, self.template_name, {'form': form})
 
 
@@ -65,8 +70,8 @@ class DeleteBookingView(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('mybookings')
 
     def delete(self, request, *args, **kwargs):
-        messages.success(self.request,
-                         'Your booking was deleted successfully.')
+        messages.add_message(request, messages.SUCCESS,
+                             'Your booking was deleted successfully.')
         return super(DeleteBookingView, self).delete(request, *args, **kwargs)
 
     def get_object(self, queryset=None):
