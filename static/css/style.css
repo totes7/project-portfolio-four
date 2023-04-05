@@ -9,8 +9,7 @@ body {
 main {
     flex: 1 0 auto;
     background-color: #ffffff;
-    background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 17.5px 17.5px, linear-gradient(#11e084 1.4000000000000001px, transparent 1.4000000000000001px) 0 -0.7000000000000001px, linear-gradient(90deg, #11e084 1.4000000000000001px, #ffffff 1.4000000000000001px) -0.7000000000000001px 0;
-    background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 6px ), repeating-linear-gradient( #11e08455, #11e084 );
     }
 
 .row {
@@ -45,7 +44,6 @@ main {
     margin-top: 3%;
     margin-bottom: 2%;
     background-color: rgb(255, 255, 255);
-    border: 1px solid #0b8b52;
 }
 
 hr {
@@ -123,6 +121,10 @@ nav .brand-logo {
 
 nav li:hover {
     background-color: #0b8b52;
+}
+
+.dropdown-content {
+    z-index: 1;
 }
 
 .dropdown-content li>a {

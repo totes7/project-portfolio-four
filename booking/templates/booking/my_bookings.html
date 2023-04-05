@@ -3,15 +3,17 @@
 {% block content %}
 
 <div class="container">
-    <div class="row txt-header cover-text">
+    <div class="row txt-header">
         <h3>My Bookings</h3>
         <div class="col l10 offset-l1 m10 offset-m1">
             {% for booking in bookings %}
             <div class="card bg-color-main">
                 <div class="card-content">
                     <p><span class="txt-bold">Date:</span> {{ booking.date }} | <span class="txt-bold">Time:</span>
-                        {{ booking.get_time_display }} | <span class="txt-bold">Number of Guests:</span> {{ booking.guests }} |
-                        <span class="txt-bold">Table Number:</span> {{ booking.table_number }}</p>
+                        {{ booking.get_time_display }} | <span class="txt-bold">Number of Guests:</span>
+                        {{ booking.guests }} |
+                        <span class="txt-bold">Table Number:</span> {{ booking.table_number }} | <span
+                            class="txt-bold">Special Requests: </span> {{ booking.special_request }} </p>
                 </div>
                 <div class="card-action">
                     <a href="{% url 'edit_booking' booking.pk %}" class="waves-effect waves-light btn-small bg-color-sec">Edit</a>
