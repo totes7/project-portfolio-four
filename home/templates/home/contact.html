@@ -5,7 +5,7 @@
     <div class="row txt-header">
         <div class="col l8 offset-l2 s10 offset-s1 cover-text">
             <h3>Contact Us</h3>
-            <form method="POST">
+            <form class="contact" method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button class="waves-effect waves-light btn-small bg-color-sec" type="submit">Send</button>

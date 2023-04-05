@@ -127,10 +127,6 @@ nav li:hover {
     background-color: #0b8b52;
 }
 
-.dropdown-content {
-    z-index: 1;
-}
-
 .dropdown-content li>a {
     color: white;
 }
@@ -194,35 +190,11 @@ nav li:hover {
 }
 
 
-/* My Bookings page */
+/* Contact page */
 
-.my-bookings-wrapper {
-    background-image: url("https://res.cloudinary.com/dbyx9r5rz/image/upload/v1680093078/mybookings-image_wbs1cf.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-    flex: 1;
+.contact {
+    margin-bottom: 2%;
 }
-
-
-/* Menu page */
-
-.menu-wrapper {
-    background-image: url("https://res.cloudinary.com/dbyx9r5rz/image/upload/v1679489679/menu-image_iyxmbf.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    flex: 1;
-}
-
-.img-circle {
-    border-radius: 50%;
-  }
-
 
 /* Footer */
 
