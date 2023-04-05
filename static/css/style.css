@@ -53,6 +53,10 @@ hr {
     text-align: center;
 }
 
+textarea {
+    height: 2%;
+}
+
 
 /* Background colors */
 
