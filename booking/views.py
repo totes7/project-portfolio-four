@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import (CreateView, UpdateView, DeleteView, FormView,
                                   TemplateView, ListView)
-from .models import Booking, Table
-from .forms import BookingForm
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
+from .models import Booking, Table
+from .forms import BookingForm
 
 
 class MakeBookingView(LoginRequiredMixin, CreateView):
