@@ -206,6 +206,12 @@ This is a website for a high-end restaurant in Miami, South Beach. It consist of
 
     ![Contact Us Page](readme_docs/ContactPage.jpg)
 
+* **Admin Panel**
+
+    * The admin panel allows the owner of the rastaurant to manage the website and the bookings.
+    * The owner can easily view all bookings made by useers and modify or delete them.
+    * The owner can also add or remove tables from the restaurant to increase or decrease availability.
+
 ### Future Implementations
 
 * User can sign in and log in using their social media accounts.
