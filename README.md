@@ -309,3 +309,21 @@ The project has been deployed to Heroku. The following steps are used to deploy 
     * On GitHub navigate to the main page of the repository.
     * The 'Fork' button can be found on the top righthand side of the screen.
     * Click the button to create a copy of the original repository.
+
+## Credits
+
+### Code Used
+
+* The Code Institute **Hello Django** and **I Think Therefore I Blog** walkthroughs were both consulted during the building of this website.
+* The Deployement section of this README.md file was taken from The-Pizza-Oven project by GitHub user [Stephanie-Ash](https://github.com/Stephanie-Ash/the-pizza-oven).
+
+### Media
+
+* The homepage anf chef profile images were taken from [Pexels](https://www.pexels.com/).
+* The website mockup image at the top of the README.md file was created on [Am I Responsive?](https://ui.dev/amiresponsive)
+* The background css pattern was created using [Magic Pattern](https://www.magicpattern.design/tools/css-backgrounds).
+* The icons on the site are from [Font Awsome](https://fontawesome.com/).
+* The site favicon was generate using [Favicon.io](https://favicon.io/favicon-generator/)
+* The wireframes for the project were created on [Mockplus](https://www.mockplus.com/)
+* The database schema was designed on [Dbdiagram.io](https://dbdiagram.io/home)
+
