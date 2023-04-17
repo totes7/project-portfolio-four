@@ -31,7 +31,6 @@ This is a website for a high-end restaurant in Miami, South Beach. It consist of
   * [Deployment](#deployment)
   * [Local Development](#local-development)
     * [How to Fork](#how-to-fork)
-    * [How to Clone](#how-to-clone)
 
 * [Testing](#testing)
 
@@ -42,8 +41,6 @@ This is a website for a high-end restaurant in Miami, South Beach. It consist of
   * [Acknowledgments](#acknowledgments)
 
 ## User Experience (UX)
-
----
 
 ### User Stories
 
@@ -68,8 +65,6 @@ This is a website for a high-end restaurant in Miami, South Beach. It consist of
     * As a Site Admin I can view existing reservations so that I can inform the customers about any possible issues with their bookings.
 
 ## Design
-
----
 
 ### Colour Scheme
 
@@ -130,8 +125,6 @@ This is a website for a high-end restaurant in Miami, South Beach. It consist of
 
 
 ## Features
-
----
 
 ### Existing Features
 
@@ -217,3 +210,102 @@ This is a website for a high-end restaurant in Miami, South Beach. It consist of
 * User can sign in and log in using their social media accounts.
 * An email confirmation is sent to the user email upon booking a table successfully.
 * An email reminding the user of an upcoming booking is sent to user email on the day of the reservation.
+
+## Technologies Used
+
+### Languages Used
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML5)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+### Frameworks, Libraries & Programs Used
+
+* [Django](https://www.djangoproject.com/) is the MVC framework used to create the website.
+* [Django Allauth](https://django-allauth.readthedocs.io/en/latest/index.html) has been used to set up user authentication on the site.
+* [Materialize](https://materializecss.com/)has been used to assist with the styling of the site and particularly the responsiveness.
+* [Heroku](https://www.heroku.com) has been used as the platform to deploy the site.
+* [Gunicorn](https://gunicorn.org/) has been used as the server to run Django on Heroku.
+* [Cloudinary](https://cloudinary.com/) has been used to store the static and media files for the site.
+* [PostgresSQL](https://www.postgresql.org/) has been used as the database for the site.
+* [Git](https://git-scm.com/) has been used for version control by using the Gitpod terminal to commit and push code to GitHub.
+* [Github](https://github.com/) has been used to store the project's code.
+
+
+## Deployment & Local Development
+
+### Deployment
+
+The project has been deployed to Heroku. The following steps are used to deploy the site:
+
+* **Creating the Heroku App**
+    * On the Heroku dashboard at the top righthand side select the New button and then Create new app.
+    * Give the app a name and select the most appropriate location then select create app.
+* **Configuring the Heroku App**
+    * From the menu at the top of the page select the Resources tab.
+    * In the Add-ons box on the resources tab search for Postgres and select Heroku Postgres selecting the free plan before confirming.
+    * From the menu at the top of the page select the settings tab.
+    * Under Config Vars select Reveal Config Vars. The DATABASE_URL should already be listed.
+    * Add a SECRET_KEY and any other required environment variables. For this project this includes CLOUDINARY_URL, EMAIL_HOST_PASS, EMAIL_HOST_USER.
+* **Configuring the Django Settings**
+    * In the workspace terminal install the Gunicorn web server:
+        ```
+        pip3 install gunicorn
+        ```
+    * In the workspace terminal install the libraries required by the database:
+        ```
+        pip3 install dj_database_url psycopg2
+        ```
+    * Add the installs to the requirements.txt file
+        ```
+        pip3 freeze --local > requirements.txt
+        ```
+    * Create an env.py file in the top level of the directory and add the environment variables to the file.
+    * At the top of the django settings file import os and import dj_database_url.
+    * At the top of the django settings file add the following if statement to use the env.py file in the development environment:
+        ```
+        if os.path.isfile('env.py'):
+        import env
+        ````
+    * Replace the databases section in the Django settings file with:
+        ```
+        DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        }
+        ```
+    * Replace the SECRET_KEY setting in the Django settings file with:
+        ```
+        SECRET_KEY = os.environ.get('SECRET_KEY')
+        ```
+    * Migrate the models to the database:
+        ```
+        python3 manage.py migrate
+        ```
+    * Any model objects that may have been added to the default database in development will have to be added to the Heroku Postgres database.
+    * Create a superuser for the app:
+        ```
+        python3 manage.py createsuperuser
+        ```
+    * Add the Heroku Hostname to the ALLOWED_HOSTS setting in the Django settings file:
+        ```
+        ALLOWED_HOSTS = ['the-pizza-oven.herokuapp.com', 'localhost']
+        ```
+    * Set DEBUG to False in the Django settings file.
+    * Add a Procfile containing the following code in the top level of the directory:
+    ```
+    web: gunicorn pizza_oven.wsgi
+    ```
+    * In the terminal add, commit and push all changes.
+* **Deploying the App**
+    * In Heroku select the deploy tab from the menu at the top.
+    * Select GitHub as the deployment method and browse and connect to the correct repository.
+    * Under manual deploy select the main branch and the select deploy branch.
+
+### Local Development
+
+* **How to Fork:**
+
+    * On GitHub navigate to the main page of the repository.
+    * The 'Fork' button can be found on the top righthand side of the screen.
+    * Click the button to create a copy of the original repository.
