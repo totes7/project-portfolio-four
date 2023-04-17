@@ -71,3 +71,60 @@ This is a website for a high-end restaurant in Miami, South Beach. It consist of
 ---
 
 ## Design
+
+* ### Colour Scheme
+
+  For this project I started by choosing a vibrant green as the main color, called Caribbean Green 
+  (#11e084).
+  Then I used [imagecolorpicker.com](https://imagecolorpicker.com/) to find two complementary colors. The result gave me a nice monochromatic triad, in which the two secondary colors are Dark Green (#043620) and Spanish Green (#0b8b52).
+
+![Color Palette](readme_docs/ColorPalette.jpg)
+
+* ### Typography
+
+  The fonts used in this project are Roboto and Nunito, taken from [Google Fonts](https://fonts.google. 
+  com/)
+
+![Fonts Samples](readme_docs/FontsSamples.jpg)
+
+* ### Imagery
+
+  The only two images included in the project are the background image of the homepage, which is just a restaurant main floor, and the chef profile image. The rest of the pages all have the same main bacground wavey pattern using the main color and white.
+
+* ### Wireframes
+
+  The site design is quite simple, allowing the users to easily access the booking form, their existing reservations and the restaurant menu. The wireframes created to help with the layout are as follows:
+
+  * Homepage 
+
+  ![Homepage Wireframe](readme_docs/WireframeHomepage.jpg)
+
+  * Sign Up
+
+  ![SignUp Wireframe](readme_docs/WireframeSignUp.jpg)
+
+  * Log In
+
+  ![LogIn Wireframe](readme_docs/WireframeLogIn.jpg)
+
+  * Make Booking
+
+  ![MakeBooking Wireframe](readme_docs/WireframeMakeReservation.jpg)
+
+  * Manage Bookings
+
+  ![ManageBookings Wireframe](readme_docs/WireframeManageReservation.jpg)
+
+  * Contact Us Page
+
+  ![ContactUs Wireframe](readme_docs/WireframeContactPage.jpg)
+
+  ### Differences to Design
+
+  The final design is slightly different from the wireframes. The function to log in and sign up using Google accounts was not implemented, so that button is not present in the final design. The option to choose from different locations for the restaurant was not implemented, so in the booking form and in the manage bookings cards the location slot is not present. The manage your bookings page is also different from the wireframe in the web implementation, with the table design being substituted by the cards like in the mobile wireframe. The conact page is also slightly different in the final design, with the message replaced by a name and email slots.
+
+  ### Database Schema
+
+  The site database schema is based around two models, booking and table. The booking model includes all the required information that the user has to provide in order to make a booking, with the primary key being the booking id. The table model is quite simple, consisting of a table id, table number (primary key) and a table capacity. The two models are connected via the table number, which is reflected in the booking informations once the booking is successfully placed, with the system making sure that the same table is not booked twice at the same time and date.
+
+  ![Database Models Wireframe](readme_docs/DatabaseModelsWireframe.jpg)
