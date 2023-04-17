@@ -20,9 +20,8 @@ This is a website for a high-end restaurant in Miami, South Beach. It consist of
   * [Wireframes](#wireframes)
 
 * [Features](#features)
-  * [General Features on Each Page](#general-features-on-each-page)
+  * [Existing Features](#existing-features)
   * [Future Implementations](#future-implementations)
-  * [Accessibility](#accessibility)
 
 * [Technologies Used](#technologies-used)
   * [Languages Used](#languages-used)
@@ -42,9 +41,9 @@ This is a website for a high-end restaurant in Miami, South Beach. It consist of
   * [Media](#media)
   * [Acknowledgments](#acknowledgments)
 
----
-
 ## User Experience (UX)
+
+---
 
 ### User Stories
 
@@ -68,11 +67,11 @@ This is a website for a high-end restaurant in Miami, South Beach. It consist of
     * As a Site Admin I can access an admin page so that I can easily see and manage reservations.
     * As a Site Admin I can view existing reservations so that I can inform the customers about any possible issues with their bookings.
 
----
-
 ## Design
 
-* ### Colour Scheme
+---
+
+### Colour Scheme
 
   For this project I started by choosing a vibrant green as the main color, called Caribbean Green 
   (#11e084).
@@ -80,18 +79,18 @@ This is a website for a high-end restaurant in Miami, South Beach. It consist of
 
 ![Color Palette](readme_docs/ColorPalette.jpg)
 
-* ### Typography
+### Typography
 
   The fonts used in this project are Roboto and Nunito, taken from [Google Fonts](https://fonts.google. 
   com/)
 
 ![Fonts Samples](readme_docs/FontsSamples.jpg)
 
-* ### Imagery
+### Imagery
 
   The only two images included in the project are the background image of the homepage, which is just a restaurant main floor, and the chef profile image. The rest of the pages all have the same main bacground wavey pattern using the main color and white.
 
-* ### Wireframes
+### Wireframes
 
   The site design is quite simple, allowing the users to easily access the booking form, their existing reservations and the restaurant menu. The wireframes created to help with the layout are as follows:
 
@@ -128,3 +127,87 @@ This is a website for a high-end restaurant in Miami, South Beach. It consist of
   The site database schema is based around two models, booking and table. The booking model includes all the required information that the user has to provide in order to make a booking, with the primary key being the booking id. The table model is quite simple, consisting of a table id, table number (primary key) and a table capacity. The two models are connected via the table number, which is reflected in the booking informations once the booking is successfully placed, with the system making sure that the same table is not booked twice at the same time and date.
 
   ![Database Models Wireframe](readme_docs/DatabaseModelsWireframe.jpg)
+
+
+## Features
+
+---
+
+### Existing Features
+
+* **Navigation Bar**
+
+    * The navigation bar is found on all pages and allows the user to easily navigate to the important parts of the site.
+    * It's fixed to the top of the page making it easy to locate, and it's identical on all pages of the site.
+    * When the user is not logged in it just shows the two option of loggin in or signin in.
+    * On smaller screens, it collapses to a toggler allowing for easy navigation on all devices.
+
+![Navigation Bar](readme_docs/Navbar.jpg)
+
+* **Homepage**
+
+    * The homepage consist of three main section.
+    * The first section allows the user to quickly access the booking form or check the restaurant menu.
+
+    ![Homepage Main Section](readme_docs/HomepageMain.jpg)
+
+    * The second section contains a brief paragraph with the restaurant informations, to give the user a general idea of the restaurant vibe and it's philosophy.
+
+    ![Homepage About Section](readme_docs/HomepageAbout.jpg)
+
+    * The third and final section of the homepage contains a brief description of the restaurant's surroundings, with an address and an opening hours cards.
+    * In this section the user will also find a live map feature.
+
+    ![Homepage Location Section](readme_docs/HomepageLocation.jpg)
+
+* **Footer**
+
+    * The footer contains social meadia links that open in a new tab providing easy navigation.
+    * The footer also contains the link to the contact page.
+
+    ![Footer](readme_docs/Footer.jpg)
+
+* **Menu Page**
+
+    * The menu page conatins the full restaurant menu.
+
+    ![Menu Page](readme_docs/MenuPage.jpg)
+
+    * It also includes a chef profile section with a brief introduction to the restaurant Head Chef.
+
+    ![Chef Profile](readme_docs/ChefProfile.jpg)
+
+* **Make a Booking**
+
+    * The make booking page consist of the booking form.
+    * The form is intuitive and easy to fill out.
+    * The user is required to input name and email.
+    * The user is required to also specify date and time of the reservation using the droopdowns, along with the number of guests.
+    * There's also a special requests section, but that is not a requirements and can be left blank.
+
+    ![Make a Booking](readme_docs/MakeBooking.jpg)
+
+* **My Bookings Page**
+
+    * The MyBookings page contains all reservations made by the user, with relative info.
+    * From this page the user is allowed to modify or cancel their bookings.
+    * If the user wants to edit their bookings, a page identical to the make a booking page will open with the existing booking details present to allow for easy editing.
+
+    ![MyBookings Page](readme_docs/ManageBookings.jpg)
+
+    * If the user decides to delete a booking, an alert page will open requesting the user to confirm booking deletion to avoid unwanted actions.
+
+    ![Delete Booking Page](readme_docs/DeleteBookings.jpg)
+
+* **Contact Page**
+
+    * The contact page consist of a simple form that allows the user to get in touch with the restaurant.
+    * The user is required to enter their name and email, along with the content of their message.
+
+    ![Contact Us Page](readme_docs/ContactPage.jpg)
+
+### Future Implementations
+
+* User can sign in and log in using their social media accounts.
+* An email confirmation is sent to the user email upon booking a table successfully.
+* An email reminding the user of an upcoming booking is sent to user email on the day of the reservation.
