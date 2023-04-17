@@ -289,12 +289,12 @@ The project has been deployed to Heroku. The following steps are used to deploy 
         ```
     * Add the Heroku Hostname to the ALLOWED_HOSTS setting in the Django settings file:
         ```
-        ALLOWED_HOSTS = ['the-pizza-oven.herokuapp.com', 'localhost']
+        ALLOWED_HOSTS = ['totes7-dinemate.herokuapp.com', 'localhost']
         ```
     * Set DEBUG to False in the Django settings file.
     * Add a Procfile containing the following code in the top level of the directory:
     ```
-    web: gunicorn pizza_oven.wsgi
+    web: gunicorn dinemate.wsgi
     ```
     * In the terminal add, commit and push all changes.
 * **Deploying the App**
