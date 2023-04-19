@@ -8,7 +8,7 @@ This is a website for a high-end restaurant in Miami, South Beach. It consist of
 
 ---
 
-## CONTENTS
+## Table of Contents
 
 * [User Experience](#user-experience-ux)
   * [User Stories](#user-stories)
@@ -309,6 +309,12 @@ The project has been deployed to Heroku. The following steps are used to deploy 
     * On GitHub navigate to the main page of the repository.
     * The 'Fork' button can be found on the top righthand side of the screen.
     * Click the button to create a copy of the original repository.
+
+
+## Testing
+
+The project has been validated and manually tested. Details of testing can be found [here](TESTING.md).
+
 
 ## Credits
 
