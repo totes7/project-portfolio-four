@@ -321,6 +321,7 @@ The project has been validated and manually tested. Details of testing can be fo
 ### Code Used
 
 * The Code Institute **Hello Django** and **I Think Therefore I Blog** walkthroughs were both consulted during the building of this website.
+* The alerts classes in CSS for Materialize were taken from [this](https://stackoverflow.com/questions/38156282/create-alert-using-materialize-css) Stackoverflow thread, specifically [this repo](https://github.com/Rinebeck/materialert) from GitHub user Rinebeck.
 * The Deployement section of this README.md file was taken from The-Pizza-Oven project by GitHub user [Stephanie-Ash](https://github.com/Stephanie-Ash/the-pizza-oven).
 
 ### Media
