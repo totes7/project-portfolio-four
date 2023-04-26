@@ -67,6 +67,7 @@ Details of these manual tests are listed below:
     * Both Sign Up and Log In pages work correctly.
     * Forms on these pages work as expected, were users must input username, password and confirm password to register, and username and password to log in.
     * Log Out page asks the user to confirm if they want to log out befor doing so.
+    * After Sign Up, Log In and Log Out a success alert message is displayed to the user; the message correctly disappears after 3 seconds.
 
 * **Homepage:**
 
@@ -80,7 +81,7 @@ Details of these manual tests are listed below:
     * The booking form works correctly, where users must input all details apart from special requests, which can be left blank.
     * A form error is displayed if any of the required fields is left blank.
     * The date and time widgets work correctly, with the time widget only displaying the time slots specified in the Booking model.
-    * A success alert message is displayed when the user succesfully places a booking.
+    * A success alert message is displayed when the user succesfully places a booking; the message correctly disappears after 3 seconds.
     * Once the user places a booking, he/she gets redirected to the My Bookings page.
 
 * **My Bookings Page:**
@@ -102,7 +103,7 @@ Details of these manual tests are listed below:
     * The Delete Bookiong page appears once the user clicks on Delete button in My Booking card.
     * The page displays the details of the selected booking, asking the user for deletion confirmation.
     * A Back button is present to give the user the option to go back to My Booking page if the user decides not to go through with the booking cancellation.
-    * A success message is displayed once the booking is successfully deleted.
+    * A success message is displayed once the booking is successfully deleted; the message correctly disappears after 3 seconds.
     * Upon deletion, the user is redirected to My Bookings page.
 
 * **Menu Page:**
