@@ -131,3 +131,24 @@ Details of these manual tests are listed below:
 
 ## Validator Testing
 
+* **HTML**
+    * All HTML pages have been checked using the [W3C Markup Validator](https://validator.w3.org/). No errors have been found.
+* **CSS**
+    * The style.css page has been checked using the [W3C CSS Validator](https://jigsaw.w3.org/). No errors have been found.
+* **JavaScript**
+    * The script.js page has been checked using the [Beautify Tools](https://beautifytools.com/) Validator. No errors have been found.
+* **Python**
+    * All Python pages have been checked using the [Code Institute Python Linter](https://pep8ci.herokuapp.com/). No errors have been found.
+
+
+## Bugs
+
+### Known Bugs
+
+* The success alert message when updating a booking is not showing. I tried every solution I could find online, but the bug persist.
+
+### Solved Bugs
+
+* Initially the NavBar used to have a single button named Booking that opened a dropdown containing the Make a Booking and My Bookings buttons, but at some point during development the dropdown stopped working on larger screens and was only working on smaller screens inside the SideNav. I had to remove the dropdown and create the two separate buttons in order to fix the issue.
+* During development it was discovered that once a booking was edited, it created a new instance of the booking without removing the previous instance. This was fixed modifying the python code ensuring that the existing instance was being modified instead of creating a brand new one.
+* Initially in the My Booking page the booking cards showed the time of reservation as the number 1 through 4 of the 'BOOKING_TIME' tuple present in the Booking model. The issue was fixed replacing {{ booking.time }} with {{ booking.get_time_display }} in the HTML form.
