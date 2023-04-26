@@ -7,13 +7,13 @@
             <h1>Welcome to DineMate!</h1>
         </div>
         {% if user.is_authenticated %}
-            <a href="{% url 'makebooking' %}" class="waves-effect waves-light btn-large bg-color-three">Make a Reservation</a>
+            <a href="{% url 'makebooking' %}" class="waves-effect waves-light btn-large bg-color-three" aria-label="go to booking form">Make a Reservation</a>
             <p>or</p>
-            <a href="{% url 'menu' %}" class="waves-effect waves-light btn-large bg-color-three">Check out the Menu</a>
+            <a href="{% url 'menu' %}" class="waves-effect waves-light btn-large bg-color-three" aria-label="go to menu page">Check out the Menu</a>
         {% else %}
-            <a href="{% url 'account_login' %}" class="waves-effect waves-light btn-large bg-color-three">Log In</a>
+            <a href="{% url 'account_login' %}" class="waves-effect waves-light btn-large bg-color-three" aria-label="go to log in page">Log In</a>
             <p>or</p>
-            <a href="{% url 'account_signup' %}" class="waves-effect waves-light btn-large bg-color-three">Sign Up</a>
+            <a href="{% url 'account_signup' %}" class="waves-effect waves-light btn-large bg-color-three" aria-label="go to sign up page">Sign Up</a>
         {% endif %}
     </div>
 

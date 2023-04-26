@@ -8,7 +8,7 @@
             <form class="contact" method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button class="waves-effect waves-light btn-small bg-color-sec" type="submit">Send</button>
+                <button class="waves-effect waves-light btn-small bg-color-sec" type="submit" aria-label="submit contact form">Send</button>
             </form>
         </div>
     </div>

@@ -18,10 +18,10 @@
     <div class="row txt-header">
         <form method="POST">
             {% csrf_token %}
-            <button class="waves-effect waves-light btn-small bg-color-sec" type="submit">Delete</button>
+            <button class="waves-effect waves-light btn-small bg-color-sec" type="submit" aria-label="confirm booking cancellation">Delete</button>
         </form>
         <p class="text-center">
-            <a href="{% url 'mybookings' %}" class="waves-effect waves-light btn-small bg-color-sec">Back</a>
+            <a href="{% url 'mybookings' %}" class="waves-effect waves-light btn-small bg-color-sec" aria-label="go back to bookings list">Back</a>
         </p>
     </div>
 </div>

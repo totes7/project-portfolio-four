@@ -38,18 +38,18 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper bg-color-main">
-                <a href="{% url 'homepage' %}" class="brand-logo txt-bold nunito">Dine<span id="logo-half">Mate</span></a>
+                <a href="{% url 'homepage' %}" class="brand-logo txt-bold nunito" aria-label="website logo">Dine<span id="logo-half">Mate</span></a>
                 <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{% url 'homepage' %}">Home</a></li>
+                    <li><a href="{% url 'homepage' %}" aria-label="go to homepage">Home</a></li>
                     {% if user.is_authenticated %}
-                        <li><a href="{% url 'makebooking' %}">Make Booking</a></li>
-                        <li><a href="{% url 'mybookings' %}">My Bookings</a></li>
-                        <li><a href="{% url 'menu' %}">Menu</a></li>
-                        <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+                        <li><a href="{% url 'makebooking' %}" aria-label="go to booking form">Make Booking</a></li>
+                        <li><a href="{% url 'mybookings' %}" aria-label="go to booking list page">My Bookings</a></li>
+                        <li><a href="{% url 'menu' %}" aria-label="go to menu page">Menu</a></li>
+                        <li><a href="{% url 'account_logout' %}" aria-label="log out from website">Log Out</a></li>
                     {% else %}
-                        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-                        <li><a href="{% url 'account_login' %}">Log In</a></li>
+                        <li><a href="{% url 'account_signup' %}" aria-label="go to sign up page">Sign Up</a></li>
+                        <li><a href="{% url 'account_login' %}" aria-label="go to log in page">Log In</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -58,15 +58,15 @@
 
     <!-- Mobile sidenav -->
     <ul class="sidenav bg-color-three" id="slide-out">
-        <li><a href="{% url 'homepage' %}">Home</a></li>
+        <li><a href="{% url 'homepage' %}" aria-label="go to homepage">Home</a></li>
         {% if user.is_authenticated %}
-            <li><a href="{% url 'makebooking' %}">Make Booking</a></li>
-            <li><a href="{% url 'mybookings' %}">My Bookings</a></li>
-            <li><a href="{% url 'menu' %}">Menu</a></li>
-            <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+            <li><a href="{% url 'makebooking' %}" aria-label="go to booking form">Make Booking</a></li>
+            <li><a href="{% url 'mybookings' %}" aria-label="go to booking list page">My Bookings</a></li>
+            <li><a href="{% url 'menu' %}" aria-label="go to menu page">Menu</a></li>
+            <li><a href="{% url 'account_logout' %}" aria-label="log out from website">Log Out</a></li>
         {% else %}
-            <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-            <li><a href="{% url 'account_login' %}">Log In</a></li>
+            <li><a href="{% url 'account_signup' %}" aria-label="go to sign up page">Sign Up</a></li>
+            <li><a href="{% url 'account_login' %}" aria-label="go to log in page">Log In</a></li>
         {% endif %}
     </ul>
 
@@ -99,7 +99,7 @@
                     <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 </div>
                 <div class="col l4 offset-l2 s6 contact">
-                    <a href="{% url 'contact' %}"><i class="fa-solid fa-envelope"></i>Contact Us</a>
+                    <a href="{% url 'contact' %}" aria-label="open contact page"><i class="fa-solid fa-envelope"></i>Contact Us</a>
                 </div>
             </div>
         </div>

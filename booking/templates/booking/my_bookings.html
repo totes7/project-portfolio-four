@@ -16,8 +16,8 @@
                             class="txt-bold">Special Requests: </span> {{ booking.special_request }} </p>
                 </div>
                 <div class="card-action">
-                    <a href="{% url 'edit_booking' booking.pk %}" class="waves-effect waves-light btn-small bg-color-sec">Edit</a>
-                    <a href="{% url 'delete_booking' booking.pk %}" class="waves-effect waves-light btn-small bg-color-sec">Delete</a>
+                    <a href="{% url 'edit_booking' booking.pk %}" class="waves-effect waves-light btn-small bg-color-sec" aria-label="edit booking">Edit</a>
+                    <a href="{% url 'delete_booking' booking.pk %}" class="waves-effect waves-light btn-small bg-color-sec" aria-label="delete booking">Delete</a>
                 </div>
             </div>
             {% endfor %}
