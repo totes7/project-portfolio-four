@@ -36,9 +36,7 @@ This is a website for a high-end restaurant in Miami, South Beach. It consist of
 
 * [Credits](#credits)
   * [Code Used](#code-used)
-  * [Content](#content)
   * [Media](#media)
-  * [Acknowledgments](#acknowledgments)
 
 ## User Experience (UX)
 
